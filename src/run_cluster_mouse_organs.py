@@ -48,7 +48,7 @@ def main():
     parser.add_argument('--num_experts', default=7, type=int, help='Number of experts in model.')
     parser.add_argument('--batch_size', type=int, default=256, help='Number of cells per multi-cell input.')
     parser.add_argument('--batch_size_test', type=int, default=512, help='Number of samples to test model.')
-    parser.add_argument('--num_iterations', type=int, default=20, help='Number of trainings iterations.')
+    parser.add_argument('--num_iterations', type=int, default=20000, help='Number of trainings iterations.')
     parser.add_argument('--activation_fct', default='elu', type=str, choices=['relu', 'elu', 'sigmoid', 'hard_sigmoid', 'selu', 'softmax', 'softplus', 'softsign', 'tanh', 'LeakyRelu'], help='Choice of activation functions to use in decoder.')
 
     ## loss coefficients
