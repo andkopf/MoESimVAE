@@ -1,0 +1,17 @@
+name: moesimvae
+channels:
+  - conda-forge/label/cf201901
+  - conda-forge
+  - https://repo.continuum.io/pkgs/free
+  - defaults
+dependencies:
+  - pip=21.0.1=py36hecd8cb5_0
+  - pip:
+    - six==1.12.0
+    - scipy==1.5.4
+    - numpy==1.19.5
+    - pandas==1.1.5
+    - matplotlib==3.3.4
+    - tensorflow==1.13.1
+    - theano==1.0.4
+    - umap-learn==0.5.1
