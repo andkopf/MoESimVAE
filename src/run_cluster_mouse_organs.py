@@ -330,7 +330,7 @@ def main():
                     saver.save(sess, os.path.join(dir_output, 'model.ckpt'))
 
             if model_hparams['plotting']:
-                if iteration % 10 == 0:
+                if iteration % 1000 == 0:
                     temp_ind_test = np.random.choice(range(len(test_data_scaled)), model_hparams['batch_size_test'], replace=False)
 
                     temp_gates, temp_code, temp_gen_output_gated, temp_assignments, temp_centroids = sess.run([gates_assignments, code, gen_output_gated, assignments, centroids],feed_dict={data: test_data_scaled[temp_ind_test]})
