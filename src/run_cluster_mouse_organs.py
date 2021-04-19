@@ -35,7 +35,7 @@ def main():
     parser.add_argument('--plotting', type=str2bool, default=True, help='Whether to always plot the updated model.')
 
     ## model hyperparameters
-    parser.add_argument('--batch_normalization', type=str2bool, default=True, help='Boolean whether to include batch normalization,')
+    parser.add_argument('--batch_normalization', type=str2bool, default=True, help='Boolean whether to include batch normalization.')
     parser.add_argument('--encoder_depth', type=int, default=1, help='Depth of encoder.')
     parser.add_argument('--encoder_internal_size', type=int, default=100, help='Internal size of encoder.')
     parser.add_argument('--decoder_depth', type=int, default=1, help='Depth of decoder.')
@@ -166,12 +166,12 @@ def main():
 
     model_hparams['num_markers'] = training_data_scaled.shape[1]
 
-    # load pca
+    # fit pca
     pca = PCA()
     pca = pca.fit(training_data_scaled)
     pca_transform = pca.transform(training_data_scaled)
 
-    # load umap
+    # fit umap
     um = umap.UMAP()
     um = um.fit(training_data_scaled)
     um_transform = um.transform(training_data_scaled)
