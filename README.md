@@ -4,7 +4,7 @@ Mixture-of-Experts Variational Autoencoder for Clustering and Generating from Si
 ## Install conda environment
 ```
 conda env create -f spec-file.yml
-conda activ moesimvae
+conda activate moesimvae
 ```
 
 ## Run MoE-Sim-VAE on scRNA-sequencing data clustering mouse organs
